@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sign in – FPTH</title>
+<style>
+    body {
+      background-color: #1e1e1e;
+      color: white;
+      font-family: 'Open Sans', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .logo-container {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .logo-container img {
+      height: 120px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    form {
+      background-color: #2b2b2b;
+      padding: 30px;
+      border-radius: 10px;
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    input {
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+      background-color: #3a3a3a;
+      color: white;
+    }
+
+    button {
+      background: linear-gradient(90deg, #ff4d4d, #4a00e0);
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background: #ff4d4d;
+    }
+  
+            header {
+              padding: 10px 20px;
+              background-color: #1e1e1e;
+            }
+            
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.slogan-fade {
+  animation: fadeIn 2s ease-in-out;
+}
+</style>
+</head>
+<body><header><div style="display: flex; align-items: center; justify-content: center; gap: 30px; flex-wrap: nowrap; padding: 20px 0;"><img src="logo.png" style="height: 160px;"/><div class="slogan-fade" style="font-size: 22px; color: white; font-weight: bold; white-space: nowrap;">Pour un environnement sain, respectueux et professionnel</div></div></header>
+<div class="logo-container">
+</div>
+<form onsubmit="login(event)">
+<h2>Sign in</h2>
+<input id="username" placeholder="Nom d'utilisateur" required="" type="text"/>
+<input id="password" placeholder="Mot de passe" required="" type="password"/>
+<button type="submit">Se connecter</button>
+</form>
+<script>
+    function login(e) {
+      e.preventDefault();
+      const user = document.getElementById('username').value;
+      const pass = document.getElementById('password').value;
+      if (user === 'FPTH' && pass === '258080') {
+        alert('Connexion réussie !');
+        // redirection ou gestion admin ici
+      } else {
+        alert('Identifiants incorrects.');
+      }
+    }
+  </script>
+<footer style="text-align: center; padding: 20px; background-color: #111; color: #aaa; font-size: 14px;">© 2025 FPTH – Tous droits réservés</footer></body>
+</html>

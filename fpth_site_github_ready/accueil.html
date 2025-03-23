@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FPTH – Accueil</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #1e1e1e;
+      color: white;
+      font-family: 'Open Sans', sans-serif;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 40px 20px 20px;
+    }
+
+    .logo {
+      max-width: 200px;
+      height: auto;
+      margin: 0 auto 30px;
+      animation: float 2s infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 40px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 80%;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .buttons a {
+      background: linear-gradient(90deg, #ff4d4d, #4a00e0);
+      padding: 15px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      transition: transform 0.2s;
+    }
+
+    .buttons a:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 12px;
+      color: #888;
+    }
+  
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.slogan-fade {
+  animation: fadeIn 2s ease-in-out;
+}
+</style>
+</head>
+<body>
+<header><div style="display: flex; align-items: center; justify-content: center; gap: 30px; flex-wrap: nowrap; padding: 20px 0;"><img src="logo.png" style="height: 160px;"/><div class="slogan-fade" style="font-size: 22px; color: white; font-weight: bold; white-space: nowrap;">Pour un environnement sain, respectueux et professionnel</div></div></header>
+<h1>Bienvenue sur la plateforme FPTH</h1>
+<div class="buttons">
+<a href="index.html#rubrique1">Déclaration</a>
+<a href="index.html#rubrique2">Règlement</a>
+<a href="index.html#rubrique3">Avertissements</a>
+<a href="index.html#signalement">Signaler un abus</a>
+</div>
+<footer>© 2025 FPTH – Tous droits réservés</footer>
+</body>
+</html>
