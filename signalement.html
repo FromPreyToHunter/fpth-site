@@ -12,13 +12,20 @@
       padding: 50px;
       text-align: center;
     }
-    iframe {
+    .button {
+      background-color: #4a00e0;
+      color: white;
+      padding: 15px 30px;
+      font-size: 18px;
       border: none;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.5);
-      width: 90%;
-      height: 1000px;
-      margin-top: 30px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 40px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+    .button:hover {
+      background-color: #3700b3;
     }
   </style>
 </head>
@@ -30,7 +37,9 @@
 
   <h1>Signaler un abus</h1>
 
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdONEQ_urYf529Ufklfx8FOf_StpfUaZAE9603NBUAn8dEQxA/viewform?usp=preview" width="640" height="1000" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdONEQ_urYf529Ufklfx8FOf_StpfUaZAE9603NBUAn8dEQxA/viewform" target="_blank" class="button">
+    Remplir le formulaire de signalement
+  </a>
 
 </body>
 </html>
