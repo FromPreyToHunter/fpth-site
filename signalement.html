@@ -1,11 +1,10 @@
 
 <!DOCTYPE html>
-
 <html lang="fr">
 <head>
-<meta charset="utf-8"/>
-<title>Signaler un abus</title>
-<style>
+  <meta charset="UTF-8">
+  <title>Signaler un abus</title>
+  <style>
     body {
       background-color: #1f1f1f;
       color: white;
@@ -13,60 +12,25 @@
       padding: 50px;
       text-align: center;
     }
-    h1 {
-      margin-bottom: 30px;
-    }
-    form {
-      background-color: #2c2c2c;
-      padding: 30px;
-      border-radius: 10px;
-      display: inline-block;
-      text-align: left;
-      max-width: 500px;
-      width: 100%;
-    }
-    label, select, textarea {
-      display: block;
-      margin-bottom: 15px;
-      width: 100%;
-    }
-    textarea {
-      height: 120px;
-      padding: 10px;
-    }
-    button {
-      background-color: #4a00e0;
-      color: white;
+    iframe {
       border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #3700b3;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      width: 90%;
+      height: 1000px;
+      margin-top: 30px;
     }
   </style>
 </head>
-<body><img src="logo.png" style="height: 160px; display: block; margin: 0 auto 30px;"/><div style="text-align: center; color: white; font-size: 20px; font-weight: bold; margin-bottom: 30px;">Pour un environnement sain, respectueux et professionnel</div>
-<h1>Signaler un abus</h1>
-<form>
-<label for="type">Type d'abus :</label>
-<select id="type" name="type" required="">
-<option value="">-- Choisissez --</option>
-<option value="harcelement">Harcèlement</option>
-<option value="discrimination">Discrimination</option>
-<option value="autre">Autre</option>
-</select>
-<label for="description">Description :</label>
-<textarea id="description" name="description" placeholder="Expliquez ce qui s'est passé..." required=""></textarea>
-<input accept="image/*,video/*,audio/*" id="preuve" name="preuve" style="margin-bottom: 15px; display: block; width: 100%;" type="file"/><label for="preuve">Preuve (audio, photo, screenshot, vidéo) :</label><button type="submit">Envoyer</button>
-</form>
-<script>
-    document.querySelector("form").addEventListener("submit", function(event) {
-      event.preventDefault();
-      alert("✅ Merci pour votre signalement. Vous avez fait le bon choix.");
-      window.location.href = "index.html";
-    });
-  </script>
+<body>
+  <img src="logo.png" style="height: 160px; display: block; margin: 0 auto 20px;">
+  <div style="text-align: center; font-size: 18px; font-weight: bold; margin-bottom: 40px;">
+    Pour un environnement sain, respectueux et professionnel
+  </div>
+
+  <h1>Signaler un abus</h1>
+
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdONEQ_urYf529Ufklfx8FOf_StpfUaZAE9603NBUAn8dEQxA/viewform?embedded=true" width="640" height="1000" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
+
 </body>
 </html>
