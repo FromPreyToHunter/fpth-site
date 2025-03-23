@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Signaler un abus – FPTH</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+  body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #1e1e1e;
+    color: #fff;
+  }
+  header {
+    background: linear-gradient(90deg, #8e2de2, #4a00e0);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .header-top {
+    display: flex;
+    gap: 10px;
+  }
+  .btn {
+    background-color: #4a00e0;
+    padding: 8px 14px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  .btn:hover {
+    background-color: #ff4d4d;
+  }
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  .header-right img {
+    height: 50px;
+  }
+  .slogan {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: auto;
+  }
+  h2 {
+    color: #ff4d4d;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .info-box {
+    background-color: #2b2b2b;
+    padding: 20px;
+    border-radius: 10px;
+    line-height: 1.6;
+  }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.slogan-fade {
+  animation: fadeIn 2s ease-in-out;
+}
+</style>
+</head>
+<body>
+<header><div style="display: flex; align-items: center; justify-content: center; gap: 30px; flex-wrap: nowrap; padding: 20px 0;"><img src="logo.png" style="height: 160px;"/><div class="slogan-fade" style="font-size: 22px; color: white; font-weight: bold; white-space: nowrap;">Pour un environnement sain, respectueux et professionnel</div></div></header>
+<section>
+<h2>Signaler un abus</h2>
+<div class="info-box">
+<form id="form">
+<label for="type">Type d'abus</label>
+<select id="type" name="type">
+<option value="Harcèlement">Harcèlement</option>
+<option value="Discrimination">Discrimination</option>
+<option value="Abus de pouvoir">Abus de pouvoir</option>
+<option value="Autre">Autre</option>
+</select>
+<label for="description">Description</label>
+<textarea id="description" placeholder="Expliquez ce qui s'est passé..." required="" rows="6"></textarea>
+<button type="submit">Envoyer</button>
+</form>
+<script>
+          document.getElementById("form").addEventListener("submit", function(e) {
+            e.preventDefault();
+            let type = document.getElementById("type").value;
+            let desc = document.getElementById("description").value;
+            let reports = JSON.parse(localStorage.getItem("signalements") || "[]");
+            reports.push({ type, desc, date: new Date().toLocaleString() });
+            localStorage.setItem("signalements", JSON.stringify(reports));
+            alert("Signalement envoyé !");
+            this.reset();
+          });
+        </script>
+</div>
+</section>
+<footer style="text-align: center; padding: 20px; background-color: #111; color: #aaa; font-size: 14px;">© 2025 FPTH – Tous droits réservés</footer></body>
+</html>
