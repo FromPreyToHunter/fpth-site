@@ -1,10 +1,11 @@
 
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Signaler un abus</title>
-  <style>
+<meta charset="utf-8"/>
+<title>Signaler un abus</title>
+<style>
     body {
       background-color: #1f1f1f;
       color: white;
@@ -46,24 +47,21 @@
     }
   </style>
 </head>
-<body>
-  <h1>Signaler un abus</h1>
-  <form>
-    <label for="type">Type d'abus :</label>
-    <select id="type" name="type" required>
-      <option value="">-- Choisissez --</option>
-      <option value="harcelement">Harcèlement</option>
-      <option value="discrimination">Discrimination</option>
-      <option value="autre">Autre</option>
-    </select>
-
-    <label for="description">Description :</label>
-    <textarea id="description" name="description" placeholder="Expliquez ce qui s'est passé..." required></textarea>
-
-    <button type="submit">Envoyer</button>
-  </form>
-
-  <script>
+<body><img src="logo.png" style="height: 160px; display: block; margin: 0 auto 30px;"/><div style="text-align: center; color: white; font-size: 20px; font-weight: bold; margin-bottom: 30px;">Pour un environnement sain, respectueux et professionnel</div>
+<h1>Signaler un abus</h1>
+<form>
+<label for="type">Type d'abus :</label>
+<select id="type" name="type" required="">
+<option value="">-- Choisissez --</option>
+<option value="harcelement">Harcèlement</option>
+<option value="discrimination">Discrimination</option>
+<option value="autre">Autre</option>
+</select>
+<label for="description">Description :</label>
+<textarea id="description" name="description" placeholder="Expliquez ce qui s'est passé..." required=""></textarea>
+<input accept="image/*,video/*,audio/*" id="preuve" name="preuve" style="margin-bottom: 15px; display: block; width: 100%;" type="file"/><label for="preuve">Preuve (audio, photo, screenshot, vidéo) :</label><button type="submit">Envoyer</button>
+</form>
+<script>
     document.querySelector("form").addEventListener("submit", function(event) {
       event.preventDefault();
       alert("✅ Merci pour votre signalement. Vous avez fait le bon choix.");
